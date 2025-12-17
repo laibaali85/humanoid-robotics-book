@@ -8,19 +8,19 @@ import styles from './LandingPage.module.css';
 
 const features = [
   {
-    title: 'Interactive Learning',
-    description: 'Ask questions in natural language and get instant, context-aware answers from the book content.',
-    icon: '💬',
+    title: 'AI-Powered Learning',
+    description: 'Engage with an intelligent RAG chatbot that delivers instant, context-aware insights from cutting-edge robotics research.',
+    icon: '🤖',
   },
   {
-    title: 'Deep Content Understanding',
-    description: 'Our RAG-powered chatbot understands the nuances of the book, providing accurate and relevant information.',
-    icon: '🧠',
+    title: 'Neural Knowledge Engine',
+    description: 'Harness advanced semantic understanding to unlock deep technical knowledge and accelerate your mastery of Physical AI.',
+    icon: '⚡',
   },
   {
-    title: 'Query Selected Text',
-    description: 'Highlight any text on the page to ask focused questions and get explanations on specific concepts.',
-    icon: '📌',
+    title: 'Precision Query System',
+    description: 'Target any concept with surgical precision—highlight text to dive deep into complex topics and get expert-level explanations.',
+    icon: '🎯',
   },
 ];
 

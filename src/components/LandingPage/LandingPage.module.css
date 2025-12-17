@@ -1,15 +1,15 @@
 /**
  * CSS module for the landing page components.
  *
- * Provides a dark, minimalistic, and modern theme.
+ * Neon Futuristic Cyberpunk Theme - Landing Page
  */
 
 .heroBanner {
-  padding: 8rem 0;
+  padding: 10rem 0;
   text-align: center;
   position: relative;
   overflow: hidden;
-  background: #0a0a0a;
+  background: #000000;
   color: white;
 }
 
@@ -20,7 +20,19 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background: radial-gradient(ellipse at top, rgba(120, 119, 198, 0.15) 0%, transparent 70%);
+  background:
+    radial-gradient(ellipse at top, rgba(0, 255, 255, 0.2) 0%, transparent 50%),
+    radial-gradient(ellipse at bottom right, rgba(255, 0, 255, 0.15) 0%, transparent 50%);
+  animation: pulse 8s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 0.5;
+  }
+  50% {
+    opacity: 1;
+  }
 }
 
 .heroContainer {
@@ -32,19 +44,38 @@
 }
 
 .heroTitle {
-  font-size: 3.5rem;
-  font-weight: 800;
-  margin-bottom: 1rem;
-  background: linear-gradient(135deg, #e0e0e0 0%, #a0a0a0 100%);
+  font-family: 'Orbitron', sans-serif;
+  font-size: 4rem;
+  font-weight: 900;
+  margin-bottom: 1.5rem;
+  background: linear-gradient(135deg, #00ffff 0%, #ff00ff 50%, #00ffff 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-shadow: 0 0 30px rgba(0, 255, 255, 0.5);
+  animation: titleGlow 3s ease-in-out infinite;
+  letter-spacing: 2px;
+}
+
+@keyframes titleGlow {
+  0%, 100% {
+    filter: drop-shadow(0 0 10px rgba(0, 255, 255, 0.5))
+            drop-shadow(0 0 20px rgba(0, 255, 255, 0.3));
+  }
+  50% {
+    filter: drop-shadow(0 0 20px rgba(255, 0, 255, 0.5))
+            drop-shadow(0 0 40px rgba(255, 0, 255, 0.3));
+  }
 }
 
 .heroSubtitle {
-  font-size: 1.25rem;
-  color: #a0a0a0;
-  line-height: 1.6;
-  margin-bottom: 2.5rem;
+  font-family: 'Rajdhani', sans-serif;
+  font-size: 1.4rem;
+  color: #e0e0e0;
+  line-height: 1.8;
+  margin-bottom: 3rem;
+  text-shadow: 0 0 10px rgba(0, 255, 255, 0.2);
+  font-weight: 400;
 }
 
 .buttons {
@@ -55,61 +86,130 @@
 }
 
 .heroButton {
+  font-family: 'Orbitron', sans-serif;
   border-radius: 50px;
   font-weight: 600;
-  padding: 0.8rem 2rem;
+  padding: 1rem 2.5rem;
+  font-size: 1.1rem;
   transition: all 0.3s ease;
+  border: 2px solid;
+  position: relative;
+  overflow: hidden;
+}
+
+.heroButton::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.1);
+  transform: translate(-50%, -50%);
+  transition: width 0.6s, height 0.6s;
+}
+
+.heroButton:hover::before {
+  width: 300px;
+  height: 300px;
 }
 
 .heroButton:hover {
-  transform: translateY(-2px);
+  transform: translateY(-4px) scale(1.05);
 }
 
 /* Feature Showcase */
 .featureShowcase {
-  padding: 6rem 1rem;
-  background-color: #0a0a0a;
+  padding: 8rem 1rem;
+  background-color: #000000;
+  position: relative;
+}
+
+.featureShowcase::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background:
+    linear-gradient(rgba(0, 255, 255, 0.02) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 255, 255, 0.02) 1px, transparent 1px);
+  background-size: 30px 30px;
+  pointer-events: none;
 }
 
 .featureContainer {
-  max-width: 1100px;
+  max-width: 1200px;
   margin: 0 auto;
+  position: relative;
+  z-index: 1;
 }
 
 .featureGrid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2.5rem;
 }
 
 .featureCard {
-  background: #1a1a1a;
-  border: 1px solid #2a2a2a;
-  border-radius: 12px;
-  padding: 2rem;
+  background: rgba(10, 10, 10, 0.8);
+  border: 2px solid rgba(0, 255, 255, 0.2);
+  border-radius: 16px;
+  padding: 2.5rem;
   text-align: center;
-  transition: all 0.3s ease;
+  transition: all 0.4s ease;
+  position: relative;
+  overflow: hidden;
+  backdrop-filter: blur(10px);
+}
+
+.featureCard::before {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: linear-gradient(135deg, #00ffff, #ff00ff, #00ffff);
+  border-radius: 16px;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  z-index: -1;
+}
+
+.featureCard:hover::before {
+  opacity: 1;
 }
 
 .featureCard:hover {
-  transform: translateY(-8px);
-  border-color: #7877c6;
-  box-shadow: 0 8px 32px rgba(120, 119, 198, 0.1);
+  transform: translateY(-12px) scale(1.02);
+  border-color: transparent;
+  box-shadow:
+    0 0 30px rgba(0, 255, 255, 0.3),
+    0 0 60px rgba(255, 0, 255, 0.2),
+    inset 0 0 20px rgba(0, 255, 255, 0.1);
 }
 
 .featureIcon {
-  font-size: 3rem;
-  margin-bottom: 1rem;
+  font-size: 4rem;
+  margin-bottom: 1.5rem;
+  filter: drop-shadow(0 0 10px currentColor);
 }
 
 .featureTitle {
-  font-size: 1.5rem;
-  font-weight: 600;
-  margin-bottom: 0.5rem;
-  color: #e0e0e0;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: #00ffff;
+  text-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
 }
 
 .featureDescription {
-  color: #a0a0a0;
-  line-height: 1.6;
+  font-family: 'Rajdhani', sans-serif;
+  color: #e0e0e0;
+  line-height: 1.8;
+  font-size: 1.1rem;
 }

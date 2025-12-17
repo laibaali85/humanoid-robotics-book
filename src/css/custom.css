@@ -1,43 +1,48 @@
 /**
- * Custom CSS for When Models Think Wrong book
+ * Custom CSS for Physical AI & Humanoid Robotics
  *
+ * Neon Futuristic Theme - Cyberpunk inspired
  * Color scheme:
- * - Blues (#2196F3): Concept explanations
- * - Greens (#4CAF50): Examples and success
- * - Reds (#F44336): Warnings and errors
+ * - Cyan (#00ffff): Primary neon accent
+ * - Magenta (#ff00ff): Secondary neon accent
+ * - Purple (#7b2cbf): Tertiary accent
+ * - Green (#39ff14): Success and examples
  */
 
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;900&family=Rajdhani:wght@300;400;500;600;700&display=swap');
+
 :root {
-  /* Primary brand colors */
-  --ifm-color-primary: #2196F3;
-  --ifm-color-primary-dark: #1e88e5;
-  --ifm-color-primary-darker: #1976d2;
-  --ifm-color-primary-darkest: #1565c0;
-  --ifm-color-primary-light: #42a5f5;
-  --ifm-color-primary-lighter: #64b5f6;
-  --ifm-color-primary-lightest: #90caf9;
+  /* Neon Primary colors */
+  --ifm-color-primary: #00ffff;
+  --ifm-color-primary-dark: #00e6e6;
+  --ifm-color-primary-darker: #00cccc;
+  --ifm-color-primary-darkest: #00b3b3;
+  --ifm-color-primary-light: #33ffff;
+  --ifm-color-primary-lighter: #66ffff;
+  --ifm-color-primary-lightest: #99ffff;
 
-  /* Success (green for examples) */
-  --ifm-color-success: #4CAF50;
-  --ifm-color-success-dark: #43a047;
-  --ifm-color-success-darker: #388e3c;
-  --ifm-color-success-darkest: #2e7d32;
-  --ifm-color-success-light: #66bb6a;
-  --ifm-color-success-lighter: #81c784;
-  --ifm-color-success-lightest: #a5d6a7;
+  /* Neon Success (green for examples) */
+  --ifm-color-success: #39ff14;
+  --ifm-color-success-dark: #2ee610;
+  --ifm-color-success-darker: #26cc0d;
+  --ifm-color-success-darkest: #1fb30a;
+  --ifm-color-success-light: #5aff3d;
+  --ifm-color-success-lighter: #7bff66;
+  --ifm-color-success-lightest: #9cff8f;
 
-  /* Danger (red for warnings) */
-  --ifm-color-danger: #F44336;
-  --ifm-color-danger-dark: #e53935;
-  --ifm-color-danger-darker: #d32f2f;
-  --ifm-color-danger-darkest: #c62828;
-  --ifm-color-danger-light: #ef5350;
-  --ifm-color-danger-lighter: #e57373;
-  --ifm-color-danger-lightest: #ef9a9a;
+  /* Neon Danger (magenta for warnings) */
+  --ifm-color-danger: #ff00ff;
+  --ifm-color-danger-dark: #e600e6;
+  --ifm-color-danger-darker: #cc00cc;
+  --ifm-color-danger-darkest: #b300b3;
+  --ifm-color-danger-light: #ff33ff;
+  --ifm-color-danger-lighter: #ff66ff;
+  --ifm-color-danger-lightest: #ff99ff;
 
-  /* Font settings */
-  --ifm-font-family-base: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+  /* Futuristic Font settings */
+  --ifm-font-family-base: 'Rajdhani', system-ui, -apple-system, 'Segoe UI', sans-serif;
   --ifm-font-family-monospace: 'Fira Code', 'Courier New', monospace;
+  --ifm-heading-font-family: 'Orbitron', sans-serif;
   --ifm-font-size-base: 16px;
   --ifm-line-height-base: 1.65;
 
@@ -50,41 +55,56 @@
   --docusaurus-highlighted-code-line-bg: rgba(33, 150, 243, 0.1);
 }
 
-/* Dark mode */
+/* Neon Dark mode - Enhanced cyberpunk theme */
 [data-theme='dark'] {
-  --ifm-color-primary: #64b5f6;
-  --ifm-color-primary-dark: #42a5f5;
-  --ifm-color-primary-darker: #2196F3;
-  --ifm-color-primary-darkest: #1e88e5;
-  --ifm-color-primary-light: #90caf9;
-  --ifm-color-primary-lighter: #bbdefb;
-  --ifm-color-primary-lightest: #e3f2fd;
+  --ifm-color-primary: #00ffff;
+  --ifm-color-primary-dark: #00e6e6;
+  --ifm-color-primary-darker: #00cccc;
+  --ifm-color-primary-darkest: #00b3b3;
+  --ifm-color-primary-light: #33ffff;
+  --ifm-color-primary-lighter: #66ffff;
+  --ifm-color-primary-lightest: #99ffff;
 
-  --docusaurus-highlighted-code-line-bg: rgba(100, 181, 246, 0.15);
+  --ifm-background-color: #000000;
+  --ifm-background-surface-color: #0a0a0a;
+
+  --docusaurus-highlighted-code-line-bg: rgba(0, 255, 255, 0.15);
 }
 
-/* Typography improvements for readability */
+/* Futuristic Typography with neon glow effects */
 .markdown h1 {
+  font-family: 'Orbitron', sans-serif;
   font-size: 2.25rem;
   font-weight: 700;
   margin-top: 2rem;
   margin-bottom: 1rem;
+  color: #00ffff;
+  text-shadow: 0 0 10px rgba(0, 255, 255, 0.5),
+               0 0 20px rgba(0, 255, 255, 0.3),
+               0 0 30px rgba(0, 255, 255, 0.2);
 }
 
 .markdown h2 {
+  font-family: 'Orbitron', sans-serif;
   font-size: 1.75rem;
   font-weight: 600;
   margin-top: 2rem;
   margin-bottom: 0.75rem;
   padding-bottom: 0.5rem;
-  border-bottom: 2px solid var(--ifm-color-emphasis-200);
+  border-bottom: 2px solid #00ffff;
+  color: #00ffff;
+  text-shadow: 0 0 8px rgba(0, 255, 255, 0.4);
+  box-shadow: 0 2px 8px rgba(0, 255, 255, 0.2);
 }
 
 .markdown h3 {
+  font-family: 'Orbitron', sans-serif;
   font-size: 1.35rem;
   font-weight: 600;
   margin-top: 1.5rem;
   margin-bottom: 0.5rem;
+  color: #ff00ff;
+  text-shadow: 0 0 6px rgba(255, 0, 255, 0.4);
 }
 
 .markdown p {
@@ -316,26 +336,138 @@
   }
 }
 
-/* Dark, minimalistic theme overrides */
+/* Neon Cyberpunk theme overrides */
 [data-theme='dark'] {
-  --ifm-background-color: #0a0a0a;
-  --ifm-background-surface-color: #1a1a1a;
-  --ifm-global-card-background-color: #1a1a1a;
-  --ifm-color-emphasis-0: #0a0a0a;
-  --ifm-color-emphasis-100: #1a1a1a;
-  --ifm-color-emphasis-200: #2a2a2a;
-  --ifm-color-emphasis-300: #3a3a3a;
-  --ifm-color-emphasis-700: #a0a0a0;
-  --ifm-color-emphasis-900: #e0e0e0;
-  --ifm-color-primary: #7877c6;
-  --ifm-color-primary-dark: #6366f1;
+  --ifm-background-color: #000000;
+  --ifm-background-surface-color: #0a0a0a;
+  --ifm-global-card-background-color: #0a0a0a;
+  --ifm-color-emphasis-0: #000000;
+  --ifm-color-emphasis-100: #0a0a0a;
+  --ifm-color-emphasis-200: #1a1a1a;
+  --ifm-color-emphasis-300: #2a2a2a;
+  --ifm-color-emphasis-700: #00ffff;
+  --ifm-color-emphasis-900: #ffffff;
+  --ifm-color-primary: #00ffff;
+  --ifm-color-primary-dark: #00e6e6;
   --ifm-text-color: #e0e0e0;
-  --ifm-heading-color: #ffffff;
-  --ifm-link-color: #9b9acf;
-  --ifm-link-hover-color: #7877c6;
-  --ifm-code-background: #252525;
+  --ifm-heading-color: #00ffff;
+  --ifm-link-color: #00ffff;
+  --ifm-link-hover-color: #ff00ff;
+  --ifm-code-background: #0a0a0a;
+  --ifm-navbar-background-color: rgba(0, 0, 0, 0.95);
+  --ifm-footer-background-color: #000000;
 }
 
 html[data-theme='dark'] {
-  background-color: #0a0a0a;
+  background-color: #000000;
+  background-image:
+    linear-gradient(rgba(0, 255, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 255, 255, 0.03) 1px, transparent 1px);
+  background-size: 50px 50px;
+  background-attachment: fixed;
+}
+
+/* Neon glow effects for links */
+a {
+  transition: all 0.3s ease;
+}
+
+a:hover {
+  text-shadow: 0 0 8px currentColor;
+}
+
+/* Buttons with neon glow */
+.button {
+  font-family: 'Orbitron', sans-serif;
+  font-weight: 600;
+  border: 2px solid currentColor;
+  transition: all 0.3s ease;
+}
+
+.button--primary {
+  background: rgba(0, 255, 255, 0.1);
+  border-color: #00ffff;
+  color: #00ffff;
+  box-shadow: 0 0 10px rgba(0, 255, 255, 0.3),
+              inset 0 0 10px rgba(0, 255, 255, 0.1);
+}
+
+.button--primary:hover {
+  background: rgba(0, 255, 255, 0.2);
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.6),
+              inset 0 0 20px rgba(0, 255, 255, 0.2);
+  transform: translateY(-2px);
+}
+
+.button--secondary {
+  background: rgba(255, 0, 255, 0.1);
+  border-color: #ff00ff;
+  color: #ff00ff;
+  box-shadow: 0 0 10px rgba(255, 0, 255, 0.3),
+              inset 0 0 10px rgba(255, 0, 255, 0.1);
+}
+
+.button--secondary:hover {
+  background: rgba(255, 0, 255, 0.2);
+  box-shadow: 0 0 20px rgba(255, 0, 255, 0.6),
+              inset 0 0 20px rgba(255, 0, 255, 0.2);
+  transform: translateY(-2px);
+}
+
+/* Navbar with neon accents */
+.navbar {
+  border-bottom: 1px solid rgba(0, 255, 255, 0.2);
+  box-shadow: 0 2px 10px rgba(0, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+}
+
+.navbar__title {
+  font-family: 'Orbitron', sans-serif;
+  font-weight: 700;
+  color: #00ffff !important;
+  text-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
+}
+
+/* Cards with neon borders */
+.card {
+  background: rgba(10, 10, 10, 0.8);
+  border: 1px solid rgba(0, 255, 255, 0.3);
+  box-shadow: 0 0 15px rgba(0, 255, 255, 0.1);
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  border-color: #00ffff;
+  box-shadow: 0 0 25px rgba(0, 255, 255, 0.3);
+  transform: translateY(-4px);
+}
+
+/* Code blocks with neon styling */
+pre {
+  border: 1px solid rgba(0, 255, 255, 0.2);
+  box-shadow: 0 0 10px rgba(0, 255, 255, 0.1);
+}
+
+code {
+  background: rgba(0, 255, 255, 0.05);
+  border: 1px solid rgba(0, 255, 255, 0.2);
+  color: #00ffff;
+}
+
+/* Sidebar with neon accents */
+.menu__link {
+  transition: all 0.3s ease;
+}
+
+.menu__link--active {
+  color: #00ffff;
+  background: rgba(0, 255, 255, 0.1);
+  border-left: 3px solid #00ffff;
+  box-shadow: 0 0 10px rgba(0, 255, 255, 0.2);
+}
+
+.menu__link:hover {
+  background: rgba(255, 0, 255, 0.1);
+  color: #ff00ff;
+  text-shadow: 0 0 8px rgba(255, 0, 255, 0.5);
 }
